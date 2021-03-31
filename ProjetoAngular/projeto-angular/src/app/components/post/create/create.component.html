@@ -1,0 +1,35 @@
+<div class="row principal">
+    <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2"></div>
+    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <div class="card border shadow">
+            <div class="card-header">
+                <fa-icon [icon]="faEdit"></fa-icon> Adicionar Post
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="title">Titulo:</label>
+                    <input type="text" class="form-control" [(ngModel)]="tittle" name="anytittle" required value="" placeholder="Ex: titulo para o post">
+                </div>
+                <div class="form-group">
+                    <label for="category">Categoria:</label>
+                    <input type="text" class="form-control" [(ngModel)]="category" name="anycategory" value="" placeholder="Ex: nome da categoria">
+                </div>
+                <div class="form-group">
+                    <label for="date">Data:</label>
+                    <input type="date" class="form-control" [(ngModel)]="date" name="anydate" value="">
+                </div>
+                <div class="form-group">
+                    <label for="description">Descrição:</label>
+                    <textarea class="form-control" [(ngModel)]="description" name="anydescription" rows="3" value=""></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="abstract">Resumo:</label>
+                    <textarea class="form-control" [(ngModel)]="abstract" name="anyabstract" rows="3" value=""></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark btn-lg btn-block" (click)="save()">
+                    <fa-icon [icon]="faSave"></fa-icon> Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

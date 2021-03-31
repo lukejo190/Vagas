@@ -1,0 +1,40 @@
+<div class="row principal">
+	<div class="col-sm-12 col-md-12 col-lg-2 col-xl-2"></div>
+	<div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+		<div class="card border shadow">
+			<div class="card-header">
+				<fa-icon [icon]="faClipboard"></fa-icon> Posts
+				<a class="btn" style="color: green;" routerLink="/create">
+					<fa-icon [icon]="faPlusCircle" size="2x"></fa-icon>
+				</a>
+			</div>
+			<div class="card-body" *ngIf="count">
+				<table class="table">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Titulo</th>
+							<th scope="col">Categoria</th>
+							<th scope="col">Data criação</th>
+							<th scope="col">Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let post of posts">
+							<td>{{post.tittle}}</td>
+							<td>{{post.category}}</td>
+							<td>{{post.date}}</td>
+							<td>
+								<a class="btn btn-primary" routerLink="/update/{{post.id}}">
+									<fa-icon [icon]="faEdit"></fa-icon>
+								</a>&nbsp;
+								<a class="btn btn-danger" (click)="delete(post.id)">
+									<fa-icon [icon]="faTrash"></fa-icon>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

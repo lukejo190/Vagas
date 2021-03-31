@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
 	selector: 'app-home',
@@ -9,17 +10,15 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent implements OnInit {
 	public faSearch = faSearch;
 
-	constructor() { }
+	posts: any;
+	count: number;
 
-	ngOnInit(): void {
+	constructor() { 
+		this.count = 0;
 	}
 
-	cards = [
-		{tittle: "teste1", text: "texto test1", id: 1},
-		{tittle: "teste2", text: "texto test2", id: 2},
-		{tittle: "teste3", text: "texto test3", id: 3},
-		{tittle: "teste4", text: "texto test1", id: 4},
-		{tittle: "teste5", text: "texto test2", id: 5},
-		{tittle: "teste6", text: "texto test3", id: 6},
-	];
+	ngOnInit(): void {
+		this.posts = StorageService.getPosts();
+		this.count = Object.keys(this.posts).length;
+	}
 }

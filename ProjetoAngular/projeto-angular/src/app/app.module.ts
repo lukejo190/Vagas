@@ -5,21 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './components/nav/nav.component';
-import { AddComponent } from './components/add/add.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './components/home/home.component';
-import { PostComponent } from './components/post/post.component';
-import { ListComponent } from './components/list/list.component';
+import { UpdateComponent } from './components/post/update/update.component';
+import { CreateComponent } from './components/post/create/create.component';
+import { FormsModule }   from '@angular/forms';
+import { ListComponent } from './components/post/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    AddComponent,
     HomeComponent,
-    PostComponent,
-    ListComponent
+    ListComponent,
+    UpdateComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +28,7 @@ import { ListComponent } from './components/list/list.component';
     BrowserAnimationsModule,
     NgbModule,
     FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
