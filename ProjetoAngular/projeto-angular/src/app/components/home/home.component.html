@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-12">
+        <div class="border shadow">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-auto">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><fa-icon [icon]="faSearch"></fa-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" *ngFor="let card of cards">
+                        <div class="card border shadow" style="width: 18rem;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ card.tittle }}</h5>
+                                <p class="card-text">{{ card.text }}</p>
+                                <a class="btn btn-dark" routerLink="/post/' + card.id">Saiba mais</a>
+                            </div>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
