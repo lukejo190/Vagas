@@ -1,4 +1,4 @@
-Para testar os projetos, siga os passos abaixo:
+Para testar o projeto, siga os passos abaixo:
 
 1: troque para branch lucasTesteAngular, comando:
 git checkout lucasTesteAngular
