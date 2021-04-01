@@ -4,7 +4,7 @@
 		<div class="card border shadow">
 			<div class="card-header">
 				<fa-icon [icon]="faClipboard"></fa-icon> Posts
-				<a class="btn" style="color: green;" routerLink="/create">
+				<a class="btn" style="color: green;" routerLink="/create" title="Adicionar post">
 					<fa-icon [icon]="faPlusCircle" size="2x"></fa-icon>
 				</a>
 			</div>
@@ -22,12 +22,12 @@
 						<tr *ngFor="let post of posts">
 							<td>{{post.tittle}}</td>
 							<td>{{post.category}}</td>
-							<td>{{post.date}}</td>
+							<td>{{post.date | date:'dd/MM/YYYY'}}</td>
 							<td>
-								<a class="btn btn-primary" routerLink="/update/{{post.id}}">
+								<a class="btn btn-primary" routerLink="/update/{{post.id}}" title="Editar post">
 									<fa-icon [icon]="faEdit"></fa-icon>
 								</a>&nbsp;
-								<a class="btn btn-danger" (click)="delete(post.id)">
+								<a class="btn btn-danger" (click)="delete(post.id)" title="Deletar post">
 									<fa-icon [icon]="faTrash"></fa-icon>
 								</a>
 							</td>
