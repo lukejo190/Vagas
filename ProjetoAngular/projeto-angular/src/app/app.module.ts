@@ -12,6 +12,7 @@ import { UpdateComponent } from './components/post/update/update.component';
 import { CreateComponent } from './components/post/create/create.component';
 import { FormsModule }   from '@angular/forms';
 import { ListComponent } from './components/post/list/list.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ListComponent } from './components/post/list/list.component';
     BrowserAnimationsModule,
     NgbModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

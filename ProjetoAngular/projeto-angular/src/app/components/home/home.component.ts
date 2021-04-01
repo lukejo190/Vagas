@@ -11,14 +11,15 @@ export class HomeComponent implements OnInit {
 	public faSearch = faSearch;
 
 	posts: any;
-	count: number;
+	optionSearch: string;
+	valueSearch: string;
 
 	constructor() { 
-		this.count = 0;
+		this.optionSearch = "";
+		this.valueSearch = "";
 	}
 
 	ngOnInit(): void {
 		this.posts = StorageService.getPosts();
-		this.count = Object.keys(this.posts).length;
 	}
 }
